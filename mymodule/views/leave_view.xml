@@ -1,0 +1,93 @@
+<openerp>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="mymodule.leave_list">
+      <field name="name">Leave List</field>
+      <field name="model">mymodule.leave</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="date"/>
+          <field name="employee_id"/>
+          <field name="date_from"/>
+          <field name="date_to"/>
+          <field name="duration"/>
+          <field name="state"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="mymodule.leave_form">
+      <field name="name">Leave List</field>
+      <field name="model">mymodule.leave</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <field name="state" widget="statusbar"/>
+          </header>
+          <sheet>
+            <group>
+              <group>
+                <field name="name"/>
+                <field name="date" readonly="1"/>
+              </group>
+              <group>
+                <field name="employee_id" required="1"/>
+                <field name="title" required="1"/>
+                <field name="date_from" required="1"/>
+                <field name="date_to" required="1"/>
+                <field name="duration"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="mymodule.action_leave_window">
+      <field name="name">mymodule leave action</field>
+      <field name="res_model">mymodule.leave</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+
+    <!--<record model="ir.actions.server" id="mymodule.action_server">-->
+      <!--<field name="name">mymodule server</field>-->
+      <!--<field name="model_id" ref="model_mymodule_mymodule"/>-->
+      <!--<field name="code">-->
+        <!--action = {-->
+          <!--"type": "ir.actions.act_window",-->
+          <!--"view_mode": "tree,form",-->
+          <!--"res_model": self._name,-->
+        <!--}-->
+      <!--</field>-->
+    <!--</record>-->
+
+
+    <!-- Top menu item -->
+
+    <!--<menuitem name="mymodule" id="mymodule.menu_root"/>-->
+
+    <!-- menu categories -->
+
+    <menuitem name="Leave Requests"
+              id="mymodule.menu_leave_request"
+              action="mymodule.action_leave_window"
+              parent="mymodule.menu_root"/>
+    <!--<menuitem name="Menu 2" id="mymodule.menu_2" parent="mymodule.menu_root"/>-->
+
+    <!-- actions -->
+
+    <!--<menuitem name="List" id="mymodule.menu_1_list" parent="mymodule.menu_1"-->
+              <!--action="mymodule.action_window"/>-->
+    <!--<menuitem name="Server to list" id="mymodule" parent="mymodule.menu_2"-->
+              <!--action="mymodule.action_server"/>-->
+
+  </data>
+</openerp>
