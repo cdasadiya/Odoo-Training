@@ -1,0 +1,10 @@
+<odoo>
+
+    <record id="hr_leave_seq" model="ir.sequence">
+        <field name="name">Leave Request Sequence</field>
+        <field name="code">hr.leave.seq</field>
+        <field name="prefix">LR/</field>
+        <field name="padding">6</field>
+    </record>
+
+</odoo>

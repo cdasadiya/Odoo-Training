@@ -1,1 +1,2 @@
 import hr_leave
+import hr_leave_type
