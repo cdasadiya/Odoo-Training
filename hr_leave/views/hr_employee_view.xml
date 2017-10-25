@@ -1,0 +1,28 @@
+<odoo>
+
+    <record id="view_form_hr_employee" model="ir.ui.view">
+        <field name="name">hr.employee.form.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <!--<xpath expr="//div[@class='oe_title']" position="inside">-->
+                <!--<label for="employee_num" class="oe_edit_only"/>-->
+                <!--<h1>-->
+                    <!--<field name="employee_num"-->
+                           <!--required="1"-->
+                           <!--placeholder="Employee's Number"/>-->
+                <!--</h1>-->
+            <!--</xpath>-->
+
+            <div class="oe_title" position="inside">
+                <label for="employee_num" class="oe_edit_only"/>
+                <h1>
+                    <field name="employee_num"
+                           required="1"
+                           placeholder="Employee's Number"/>
+                </h1>
+            </div>
+        </field>
+    </record>
+
+</odoo>

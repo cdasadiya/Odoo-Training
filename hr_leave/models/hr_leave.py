@@ -45,3 +45,15 @@ class Leave(models.Model):
             if rec.date_from and rec.date_to:
                 if rec.date_from > rec.date_to:
                     raise ValidationError(_("'Date To' must be greater than or equal to 'Date From'"))
+
+    @api.one
+    def btn_hr(self):
+        self.state = 'hr'
+
+    @api.one
+    def btn_done(self):
+        self.state = 'done'
+
+    @api.one
+    def btn_refuse(self):
+        self.state = 'refuse'

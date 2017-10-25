@@ -10,6 +10,20 @@
         <field name="arch" type="xml">
             <form>
                 <header>
+                    <button name="btn_hr"
+                            string="Submit"
+                            type="object"
+                            states="draft"
+                            class="oe_highlight"/>
+                    <button name="btn_done"
+                            string="Approve"
+                            type="object"
+                            states="hr"
+                            class="oe_highlight"/>
+                    <button name="btn_refuse"
+                            string="Refuse"
+                            type="object"
+                            states="hr"/>
                     <field name="state"
                            widget="statusbar"
                            statusbar_visible="draft,hr,done"/>
@@ -21,13 +35,21 @@
                             <field name="date" readonly="1"/>
                         </group>
                         <group>
-                            <field name="employee_id" required="1"/>
+                            <field name="employee_id"
+                                   required="1"
+                                   attrs="{'readonly':[('state','!=','draft')]}"/>
                             <field name="department_id" readonly="1"/>
                         </group>
                         <group>
-                            <field name="leave_type_id" required="1"/>
-                            <field name="date_from" required="1"/>
-                            <field name="date_to" required="1"/>
+                            <field name="leave_type_id"
+                                   required="1"
+                                   attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="date_from"
+                                   required="1"
+                                   attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="date_to"
+                                   required="1"
+                                   attrs="{'readonly':[('state','!=','draft')]}"/>
                             <field name="duration"/>
                         </group>
                     </group>
@@ -48,6 +70,7 @@
                 <field name="date_from"/>
                 <field name="date_to"/>
                 <field name="duration"/>
+                <field name="state"/>
             </tree>
         </field>
     </record>
