@@ -1,0 +1,39 @@
+<odoo>
+
+    <record id="view_form_hr_leave_wizard" model="ir.ui.view">
+        <field name="name">hr.leave.wizard.form</field>
+        <field name="model">hr.leave.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="search_date"/>
+                    <field name="date_from"
+                           attrs="{'required':[('search_date','=',True)], 'invisible':[('search_date','=',False)]}"/>
+                    <field name="date_to"
+                           attrs="{'required':[('search_date','=',True)], 'invisible':[('search_date','=',False)]}"/>
+                    <field name="employee_id"
+                           attrs="{'required':[('search_date','=',False)], 'invisible':[('search_date','=',True)]}"/>
+                </group>
+                <footer>
+                    <button name="btn_search"
+                            string="Search"
+                            type="object"
+                            class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hr_leave_wizard" model="ir.actions.act_window">
+        <field name="name">Leave Wizard</field>
+        <field name="res_model">hr.leave.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_hr_leave_wizard"
+              name="Leave Wizard"
+              action="action_hr_leave_wizard"
+              parent="menu_hr_leave_root"/>
+
+</odoo>

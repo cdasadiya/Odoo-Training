@@ -22,6 +22,28 @@
                            placeholder="Employee's Number"/>
                 </h1>
             </div>
+
+            <notebook position="inside">
+                <page string="Leave History">
+                    <field name="leave_history_ids">
+                        <tree create="0">
+                            <field name="name"/>
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                            <field name="leave_type_id"/>
+                        </tree>
+                        <form create="0">
+                            <group>
+                                <field name="name"/>
+                                <field name="date_from"/>
+                                <field name="date_to"/>
+                                <field name="leave_type_id"/>
+                            </group>
+                        </form>
+                    </field>
+                </page>
+            </notebook>
+
         </field>
     </record>
 

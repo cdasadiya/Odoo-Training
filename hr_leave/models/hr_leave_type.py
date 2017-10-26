@@ -6,3 +6,10 @@ class LeaveType(models.Model):
     _description = "Leave Type"
 
     name = fields.Char(string='Name')
+
+    @api.multi
+    def name_get(self):
+        ret = []
+        for rec in self.search([]):
+            ret.append((rec.id, "[%d] %s" % (rec.id, rec.name)))
+        return ret

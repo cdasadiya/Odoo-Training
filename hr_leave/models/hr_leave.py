@@ -28,6 +28,20 @@ class Leave(models.Model):
     def create(self, vals):
         res = super(Leave, self).create(vals)
         res.name = self.env['ir.sequence'].get('hr.leave.seq')
+        # Create Leave History
+        self.env['hr.leave.history'].create({
+            'name': res.name,
+            'date_from': res.date_from,
+            'date_to': res.date_to,
+            'leave_type_id': res.leave_type_id.id,
+            'employee_id': res.employee_id.id,
+        })
+        # self.env['hr.employee'].browse([res.employee_id.id]).leave_history_ids = [(0, None, {
+        #     'name': res.name,
+        #     'date_from': res.date_from,
+        #     'date_to': res.date_to,
+        #     'leave_type_id': res.leave_type_id.id,
+        # })]
         return res
 
     @api.depends('date_from', 'date_to')
