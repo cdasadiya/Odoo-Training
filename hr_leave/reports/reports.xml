@@ -1,0 +1,10 @@
+<odoo>
+
+    <report id="report_hr_leave"
+            model="hr.leave"
+            string="Leave Request"
+            report_type="qweb-html"
+            name="hr_leave.hr_leave_report"
+            file="hr_leave.hr_leave_report"/>
+
+</odoo>

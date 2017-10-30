@@ -16,6 +16,8 @@ Employee can request for a leave.
         'views/hr_leave_type_view.xml',
         'views/hr_employee_view.xml',
         'wizards/views/hr_leave_wizard_view.xml',
+        'reports/hr_leave_report.xml',
+        'reports/reports.xml',
     ],
     'application': True,
 }

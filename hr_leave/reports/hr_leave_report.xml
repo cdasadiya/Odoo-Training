@@ -1,0 +1,65 @@
+<odoo>
+
+    <template id="hr_leave_report">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="report.external_layout">
+                    <div class="page" style="font-family: Courier New;">
+                        <h1 class="text-center">Leave Request</h1>
+                        <hr/>
+                        <p><strong class="glyphicon glyphicon-user">Employee:</strong> <span t-field="o.employee_id.name"/></p>
+                        <p><strong class="glyphicon glyphicon-font">Number:</strong> <span t-field="o.employee_id.employee_num"/></p>
+                        <p><strong class="glyphicon glyphicon-paperclip">Status:</strong> <span t-field="o.state"/></p>
+                        <hr/>
+                        <t t-if="o.state == 'draft'"><div class="alert alert-success">This is Draft</div></t>
+                        <t t-if="o.state == 'hr'"><div class="alert alert-info">This is HR</div></t>
+                        <t t-if="o.state == 'done'"><div class="alert alert-warning">This is Done</div></t>
+                        <t t-if="o.state == 'refuse'"><div class="alert alert-danger">This is Refuse</div></t>
+                        <table class="table table-striped table-bordered table-condensed">
+                            <tr>
+                                <th>Leave Type</th>
+                                <th>Date From</th>
+                                <th>Date To</th>
+                                <th>Duration</th>
+                            </tr>
+                            <tr>
+                                <td><span t-field="o.leave_type_id.name"/></td>
+                                <td><span t-field="o.date_from"/></td>
+                                <td><span t-field="o.date_to"/></td>
+                                <td><span t-field="o.duration"/></td>
+                            </tr>
+                        </table>
+                        <hr/>
+                        <table class="table table-striped table-bordered table-condensed">
+                            <tr>
+                                <th>Sequence</th>
+                                <th>Date From</th>
+                                <th>Date To</th>
+                                <th>Leave Type</th>
+                            </tr>
+                            <t t-set="total_leave" t-value="0"/>
+                            <t t-foreach="o.employee_id.leave_history_ids" t-as="lv">
+                                <tr>
+                                    <td><span t-field="lv.name"/></td>
+                                    <td><span t-field="lv.date_from"/></td>
+                                    <td><span t-field="lv.date_to"/></td>
+                                    <td><span t-field="lv.leave_type_id.name"/></td>
+                                </tr>
+                                <t t-set="total_leave" t-value="total_leave + 1"/>
+                            </t>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td><t t-esc="'Total Leave: %d' % total_leave"/></td>
+                            </tr>
+                        </table>
+                        <hr/>
+                        <p><span t-raw="user.signature"/></p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>
