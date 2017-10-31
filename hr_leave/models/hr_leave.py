@@ -27,6 +27,7 @@ class Leave(models.Model):
     @api.model
     def create(self, vals):
         res = super(Leave, self).create(vals)
+        # Generate sequence for leave request
         res.name = self.env['ir.sequence'].get('hr.leave.seq')
         # Create Leave History
         self.env['hr.leave.history'].create({
@@ -46,6 +47,7 @@ class Leave(models.Model):
 
     @api.depends('date_from', 'date_to')
     def _compute_duration(self):
+        """ Compute duration period from dates """
         for rec in self:
             if rec.date_from and rec.date_to:
                 df = datetime.strptime(rec.date_from, DEFAULT_SERVER_DATE_FORMAT)
@@ -55,6 +57,7 @@ class Leave(models.Model):
 
     @api.constrains('date_from', 'date_to')
     def check_dates(self):
+        """ Validating dates """
         for rec in self:
             if rec.date_from and rec.date_to:
                 if rec.date_from > rec.date_to:

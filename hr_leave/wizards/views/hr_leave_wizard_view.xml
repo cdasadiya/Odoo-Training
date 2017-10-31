@@ -19,6 +19,10 @@
                             string="Search"
                             type="object"
                             class="oe_highlight"/>
+                    <button name="btn_print"
+                            string="Print"
+                            type="object"
+                            class="oe_highlight"/>
                 </footer>
             </form>
         </field>

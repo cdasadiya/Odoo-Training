@@ -1,0 +1,314 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_leave
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-31 07:20+0000\n"
+"PO-Revision-Date: 2017-10-31 10:34+0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar_SY\n"
+"X-Generator: Poedit 2.0.1\n"
+
+#. module: hr_leave
+#: code:addons/hr_leave/models/hr_leave.py:64
+#, python-format
+msgid "'Date To' must be greater than or equal to 'Date From'"
+msgstr "\"من تاريخ\" يجب ان يكون اكبر من او يساوي \"إلى تاريخ\""
+
+#. module: hr_leave
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_report
+msgid "<strong class=\"glyphicon glyphicon-font\">Number:</strong>"
+msgstr "<strong class=\"glyphicon glyphicon-font\">الرقم:</strong>"
+
+#. module: hr_leave
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_report
+msgid "<strong class=\"glyphicon glyphicon-paperclip\">Status:</strong>"
+msgstr "<strong class=\"glyphicon glyphicon-paperclip\">الحالة:</strong>"
+
+#. module: hr_leave
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_report
+msgid "<strong class=\"glyphicon glyphicon-user\">Employee:</strong>"
+msgstr "<strong class=\"glyphicon glyphicon-user\">الموظف:</strong>"
+
+#. module: hr_leave
+#: model:ir.ui.view,arch_db:hr_leave.view_form_hr_leave
+msgid "Approve"
+msgstr "أعتماد"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_create_uid
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_history_create_uid
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_type_create_uid
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_wizard_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_create_date
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_history_create_date
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_type_create_date
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_wizard_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_date_from
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_history_date_from
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_wizard_date_from
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_custom_report
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_report
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_date_to
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_history_date_to
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_wizard_date_to
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_custom_report
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_report
+msgid "Date To"
+msgstr "إلى تاريخ"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_department_id
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_custom_report
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_display_name
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_history_display_name
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_type_display_name
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_wizard_display_name
+#: model:ir.model.fields,field_description:hr_leave.field_report_hr_leave_hr_leave_custom_report_display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: hr_leave
+#: selection:hr.leave,state:0
+#: model:ir.ui.view,arch_db:hr_leave.view_search_hr_leave
+msgid "Done"
+msgstr "منتهي"
+
+#. module: hr_leave
+#: selection:hr.leave,state:0
+#: model:ir.ui.view,arch_db:hr_leave.view_search_hr_leave
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_duration
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_custom_report
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_report
+msgid "Duration"
+msgstr "المدة"
+
+#. module: hr_leave
+#: model:ir.model,name:hr_leave.model_hr_employee
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_employee_id
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_wizard_employee_id
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_custom_report
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_leave
+#: model:ir.model,name:hr_leave.model_hr_leave_history
+msgid "Employee Leave History"
+msgstr "إجازات الموظف السابقة"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_employee_employee_num
+msgid "Employee Number"
+msgstr "رقم الموظف"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_history_employee_id
+msgid "Employee Ref."
+msgstr "Employee Ref."
+
+#. module: hr_leave
+#: code:addons/hr_leave/models/hr_employee.py:11 sql_constraint:hr.employee:0
+#, python-format
+msgid "Employee number must be unique."
+msgstr "رقم الموظف يجب ان يكون غير مكرر"
+
+#. module: hr_leave
+#: model:ir.ui.view,arch_db:hr_leave.view_form_hr_employee
+msgid "Employee's Number"
+msgstr "رقم الموظف"
+
+#. module: hr_leave
+#: selection:hr.leave,state:0
+#: model:ir.ui.view,arch_db:hr_leave.view_search_hr_leave
+msgid "HR"
+msgstr "إدارة الموارد البشرية"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_history_id
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_id
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_type_id
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_wizard_id
+#: model:ir.model.fields,field_description:hr_leave.field_report_hr_leave_hr_leave_custom_report_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave___last_update
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_history___last_update
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_type___last_update
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_wizard___last_update
+#: model:ir.model.fields,field_description:hr_leave.field_report_hr_leave_hr_leave_custom_report___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_history_write_uid
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_type_write_uid
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_wizard_write_uid
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_history_write_date
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_type_write_date
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_wizard_write_date
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_leave
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_custom_report
+msgid "Leave Custom Request"
+msgstr "تقرير الإجازات المعدل"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_employee_leave_history_ids
+#: model:ir.ui.view,arch_db:hr_leave.view_form_hr_employee
+msgid "Leave History"
+msgstr "الإجازات السابقة"
+
+#. module: hr_leave
+#: model:ir.actions.act_window,name:hr_leave.action_hr_leave
+#: model:ir.actions.report.xml,name:hr_leave.report_hr_leave
+#: model:ir.model,name:hr_leave.model_hr_leave
+#: model:ir.ui.menu,name:hr_leave.menu_hr_leave_request
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_report
+#: model:ir.ui.view,arch_db:hr_leave.view_calendar_hr_leave
+msgid "Leave Request"
+msgstr "طلب الإجازة"
+
+#. module: hr_leave
+#: model:ir.actions.act_window,name:hr_leave.action_hr_leave_type
+#: model:ir.model,name:hr_leave.model_hr_leave_type
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_history_leave_type_id
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_leave_type_id
+#: model:ir.ui.menu,name:hr_leave.menu_hr_leave_type
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_custom_report
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_report
+msgid "Leave Type"
+msgstr "نوع الاجازة"
+
+#. module: hr_leave
+#: model:ir.actions.act_window,name:hr_leave.action_hr_leave_wizard
+#: model:ir.actions.report.xml,name:hr_leave.report_action_hr_leave_custom
+#: model:ir.ui.menu,name:hr_leave.menu_hr_leave_wizard
+msgid "Leave Wizard"
+msgstr "الاستعلام عن الإجازات"
+
+#. module: hr_leave
+#: model:ir.ui.menu,name:hr_leave.menu_hr_leave_root
+msgid "Leaves"
+msgstr "الإجازات"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_type_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_leave
+#: model:ir.ui.view,arch_db:hr_leave.view_form_hr_leave_wizard
+msgid "Print"
+msgstr "طباعة"
+
+#. module: hr_leave
+#: selection:hr.leave,state:0
+#: model:ir.ui.view,arch_db:hr_leave.view_form_hr_leave
+#: model:ir.ui.view,arch_db:hr_leave.view_search_hr_leave
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_date
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: hr_leave
+#: model:ir.ui.view,arch_db:hr_leave.view_form_hr_leave_wizard
+msgid "Search"
+msgstr "بحث"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_wizard_search_date
+msgid "Search by Date"
+msgstr "البحث بالتاريخ"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_history_name
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_name
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_report
+msgid "Sequence"
+msgstr "المسلسل"
+
+#. module: hr_leave
+#: model:ir.model.fields,field_description:hr_leave.field_hr_leave_state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: hr_leave
+#: model:ir.ui.view,arch_db:hr_leave.view_form_hr_leave
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: hr_leave
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_report
+msgid "This is Done"
+msgstr "This is Done"
+
+#. module: hr_leave
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_report
+msgid "This is Draft"
+msgstr "This is Draft"
+
+#. module: hr_leave
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_report
+msgid "This is HR"
+msgstr "This is HR"
+
+#. module: hr_leave
+#: model:ir.ui.view,arch_db:hr_leave.hr_leave_report
+msgid "This is Refuse"
+msgstr "This is Refuse"
+
+#. module: hr_leave
+#: model:ir.model,name:hr_leave.model_hr_leave_wizard
+msgid "hr.leave.wizard"
+msgstr "hr.leave.wizard"
+
+#. module: hr_leave
+#: model:ir.model,name:hr_leave.model_report_hr_leave_hr_leave_custom_report
+msgid "report.hr_leave.hr_leave_custom_report"
+msgstr "report.hr_leave.hr_leave_custom_report"
+
+#. module: hr_leave
+#: model:ir.model,name:hr_leave.model_report_hr_leave_report_hr_leave_custom
+msgid "report.hr_leave.report_hr_leave_custom"
+msgstr "report.hr_leave.report_hr_leave_custom"

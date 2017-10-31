@@ -7,4 +7,12 @@
             name="hr_leave.hr_leave_report"
             file="hr_leave.hr_leave_report"/>
 
+    <report id="report_action_hr_leave_custom"
+            model="hr.leave"
+            string="Leave Wizard"
+            report_type="qweb-html"
+            name="hr_leave.hr_leave_custom_report"
+            file="hr_leave.hr_leave_custom_report"
+            menu="False"/>
+
 </odoo>
