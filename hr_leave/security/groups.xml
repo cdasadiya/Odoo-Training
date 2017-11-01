@@ -1,0 +1,8 @@
+<odoo>
+
+    <record id="group_report" model="res.groups">
+        <field name="name">Report Printing</field>
+        <field name="category_id" ref="base.module_category_human_resources"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+,,,,,,,
+access_hr_leave_employee,hr_leave_employee,model_hr_leave,base.group_user,1,1,1,0
+access_hr_leave_type_employee,hr_leave_type_employee,model_hr_leave_type,base.group_user,1,0,0,0
+access_hr_leave_history_employee,hr_leave_history_employee,model_hr_leave_history,base.group_user,1,1,1,0
+,,,,,,,
+access_hr_leave_officer,hr_leave_officer,model_hr_leave,base.group_hr_user,1,1,1,1
+access_hr_leave_type_officer,hr_leave_type_officer,model_hr_leave_type,base.group_hr_user,1,1,1,1

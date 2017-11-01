@@ -5,7 +5,8 @@
             string="Leave Request"
             report_type="qweb-html"
             name="hr_leave.hr_leave_report"
-            file="hr_leave.hr_leave_report"/>
+            file="hr_leave.hr_leave_report"
+            groups="hr_leave.group_report"/>
 
     <report id="report_action_hr_leave_custom"
             model="hr.leave"

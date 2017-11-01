@@ -11,6 +11,9 @@
 Employee can request for a leave.
     """,
     'data': [
+        'security/groups.xml',
+        'security/rules.xml',
+        'security/ir.model.access.csv',
         'sequences/hr_leave_seq.xml',
         'views/hr_leave_view.xml',
         'views/hr_leave_type_view.xml',

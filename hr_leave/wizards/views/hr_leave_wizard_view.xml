@@ -38,6 +38,7 @@
     <menuitem id="menu_hr_leave_wizard"
               name="Leave Wizard"
               action="action_hr_leave_wizard"
+              groups="hr_leave.group_report"
               parent="menu_hr_leave_root"/>
 
 </odoo>

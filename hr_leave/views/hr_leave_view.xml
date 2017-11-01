@@ -19,10 +19,12 @@
                             string="Approve"
                             type="object"
                             states="hr"
+                            groups="base.group_hr_manager"
                             class="oe_highlight"/>
                     <button name="btn_refuse"
                             string="Refuse"
                             type="object"
+                            groups="base.group_hr_manager"
                             states="hr"/>
                     <field name="state"
                            widget="statusbar"
@@ -37,7 +39,7 @@
                         <group>
                             <field name="employee_id"
                                    required="1"
-                                   attrs="{'readonly':[('state','!=','draft')]}"/>
+                                   readonly="1"/>
                             <field name="department_id" readonly="1"/>
                         </group>
                         <group>
@@ -50,7 +52,7 @@
                             <field name="date_to"
                                    required="1"
                                    attrs="{'readonly':[('state','!=','draft')]}"/>
-                            <field name="duration"/>
+                            <field name="duration" groups="base.group_hr_manager"/>
                         </group>
                     </group>
                 </sheet>
@@ -69,7 +71,7 @@
                 <field name="leave_type_id"/>
                 <field name="date_from"/>
                 <field name="date_to"/>
-                <field name="duration"/>
+                <field name="duration" groups="base.group_hr_manager"/>
                 <field name="state"/>
             </tree>
         </field>

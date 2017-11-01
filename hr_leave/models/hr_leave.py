@@ -10,7 +10,8 @@ class Leave(models.Model):
 
     name = fields.Char(string='Sequence')
     date = fields.Date(string='Request Date', default=fields.Date.today())
-    employee_id = fields.Many2one('hr.employee', string='Employee')
+    employee_id = fields.Many2one('hr.employee', string='Employee',
+                                  default=lambda self: self.env.user.employee_ids.id)
     department_id = fields.Many2one('hr.department', string='Department',
                                     related='employee_id.department_id')
     leave_type_id = fields.Many2one('hr.leave.type', string='Leave Type')

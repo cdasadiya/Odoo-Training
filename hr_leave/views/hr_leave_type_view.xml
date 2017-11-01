@@ -31,6 +31,7 @@
     <menuitem id="menu_hr_leave_type"
               name="Leave Type"
               action="action_hr_leave_type"
+              groups="base.group_hr_manager"
               parent="menu_hr_leave_root"/>
 
 </odoo>
