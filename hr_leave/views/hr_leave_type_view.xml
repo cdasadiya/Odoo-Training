@@ -7,8 +7,12 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="name"/>
+                        <field name="name" required="1"/>
                     </group>
+                    <button name="btn_sql"
+                            string="SQL Query"
+                            type="object"
+                            class="oe_highlight"/>
                 </sheet>
             </form>
         </field>

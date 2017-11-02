@@ -22,6 +22,8 @@ Employee can request for a leave.
         'reports/hr_leave_report.xml',
         'reports/hr_leave_custom_report.xml',
         'reports/reports.xml',
+        'data/schedulers.xml',
+        # 'data/leave_type.sql',
     ],
     'application': True,
 }

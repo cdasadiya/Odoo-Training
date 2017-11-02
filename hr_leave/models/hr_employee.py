@@ -6,10 +6,16 @@ class HrEmployee(models.Model):
     employee_num = fields.Char(string='Employee Number')
     leave_history_ids = fields.One2many('hr.leave.history', 'employee_id',
                                        string='Leave History')
+    counter = fields.Integer(string='Counter')
 
     _sql_constraints = [
         ('unique_emp_num', 'UNIQUE(employee_num)', _("Employee number must be unique.")),
     ]
+
+    @api.model
+    def increase_counter(self, x):
+        for rec in self.search([]):
+            rec.counter += x
 
 
 class HrLeaveHistory(models.Model):

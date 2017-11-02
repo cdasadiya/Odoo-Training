@@ -1,0 +1,14 @@
+<odoo>
+
+    <record id="cron_employee_counter" model="ir.cron">
+        <field name="name">Employee Counter</field>
+        <field name="interval_type">minutes</field>
+        <field name="interval_number">2</field>
+        <field name="doall" eval="False"/>
+        <field name="numbercall">-1</field>
+        <field name="model">hr.employee</field>
+        <field name="function">increase_counter</field>
+        <field name="args">(5,)</field>
+    </record>
+
+</odoo>

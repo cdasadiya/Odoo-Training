@@ -2,6 +2,7 @@
 
     <menuitem id="menu_hr_leave_root"
               name="Leaves"
+              web_icon="hr_leave,static/description/icon.png"
               sequence="-1"/>
 
     <record id="view_form_hr_leave" model="ir.ui.view">
@@ -55,6 +56,11 @@
                             <field name="duration" groups="base.group_hr_manager"/>
                         </group>
                     </group>
+                    <button name="%(report_hr_leave)d"
+                            string="Print Report"
+                            type="action"
+                            icon="fa-print"
+                            class="oe_highlight"/>
                 </sheet>
             </form>
         </field>
@@ -92,6 +98,16 @@
             </calendar>
         </field>
     </record>
+    <record id="view_graph_hr_leave" model="ir.ui.view">
+        <field name="name">hr.leave.graph</field>
+        <field name="model">hr.leave</field>
+        <field name="arch" type="xml">
+            <graph string="Graph">
+                <field name="leave_type_id" type="row"/>
+                <field name="state" type="col"/>
+            </graph>
+        </field>
+    </record>
     <record id="view_search_hr_leave" model="ir.ui.view">
         <field name="name">hr.leave.search</field>
         <field name="model">hr.leave</field>
@@ -99,6 +115,7 @@
             <search>
                 <field name="name"/>
                 <field name="employee_id"/>
+                <field name="leave_type_id"/>
                 <field name="state"/>
                 <filter name="state_draft"
                         string="Draft"
@@ -121,7 +138,7 @@
         <field name="type">ir.actions.act_window</field>
         <field name="search_id" ref="view_search_hr_leave"/>
         <field name="context">{'search_default_state_draft':1}</field>
-        <field name="view_mode">calendar,tree,form</field>
+        <field name="view_mode">calendar,tree,form,graph</field>
     </record>
     <menuitem id="menu_hr_leave_request"
               name="Leave Request"

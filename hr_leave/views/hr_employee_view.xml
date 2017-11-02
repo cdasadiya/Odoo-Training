@@ -23,6 +23,11 @@
                 </h1>
             </div>
 
+            <field name="notes" position="before">
+                <label for="counter"/>
+                <field name="counter"/>
+            </field>
+
             <notebook position="inside">
                 <page string="Leave History">
                     <field name="leave_history_ids">
